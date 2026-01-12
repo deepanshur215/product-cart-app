@@ -4,7 +4,7 @@ A modern e-commerce shopping cart application built with **React**, **Redux Tool
 
 ## 🔗 Live Demo
 
-[View Live Application](https://your-deployment-url.com)
+[https://product-cart-72381.web.app/](https://product-cart-72381.web.app/)
 
 ## 🚀 Tech Stack
 
@@ -48,92 +48,6 @@ The application automatically applies special offers when items are added to the
 - Soup - £0.60
 - Butter - £1.20
 
-## 🛠️ Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd product-cart-app
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-## 🏃 Running the Application
-
-### Development Mode
-```bash
-npm run dev
-```
-The application will start on `http://localhost:5173` (or the next available port).
-
-### Build for Production
-```bash
-npm run build
-```
-
-### Preview Production Build
-```bash
-npm run preview
-```
-
-## 🚀 Deployment to Firebase
-
-### Prerequisites
-1. A Firebase account ([Sign up here](https://firebase.google.com/))
-2. Firebase CLI installed globally
-
-### Installation Steps
-
-1. **Install Firebase CLI** (if not already installed):
-```bash
-npm install -g firebase-tools
-```
-
-2. **Login to Firebase**:
-```bash
-firebase login
-```
-
-3. **Initialize Firebase in your project**:
-```bash
-firebase init hosting
-```
-   - Select "Use an existing project" or "Create a new project"
-   - Set public directory to: `dist`
-   - Configure as single-page app: `Yes`
-   - Set up automatic builds: `No` (or `Yes` if using GitHub Actions)
-   - Overwrite index.html: `No`
-
-4. **Update `.firebaserc`** with your Firebase project ID:
-   - Open `.firebaserc` and replace `your-project-id` with your actual Firebase project ID
-
-5. **Build your application**:
-```bash
-npm run build
-```
-
-6. **Deploy to Firebase**:
-```bash
-firebase deploy
-```
-
-Your application will be live at: `https://your-project-id.web.app` or `https://your-project-id.firebaseapp.com`
-
-### Quick Deploy Script
-You can also create a deploy script in `package.json`:
-```json
-"scripts": {
-  "deploy": "npm run build && firebase deploy"
-}
-```
-
-Then simply run:
-```bash
-npm run deploy
-```
 
 ## 📁 Project Structure
 
@@ -180,17 +94,11 @@ The application uses Redux Toolkit for state management with the following struc
    - Calculates discounts
    - Updates subtotal, savings, and total amount
 
-## 📝 License
-
-This project is private and for personal/educational use.
 
 ## 👨‍💻 Development
 
 This project uses:
-- ESLint for code linting
 - Vite for fast development and optimized builds
 - React 19 with modern hooks and features
 
 ---
-
-Made with ❤️ using React, Redux, and Vite
