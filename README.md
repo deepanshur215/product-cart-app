@@ -79,6 +79,62 @@ npm run build
 npm run preview
 ```
 
+## 🚀 Deployment to Firebase
+
+### Prerequisites
+1. A Firebase account ([Sign up here](https://firebase.google.com/))
+2. Firebase CLI installed globally
+
+### Installation Steps
+
+1. **Install Firebase CLI** (if not already installed):
+```bash
+npm install -g firebase-tools
+```
+
+2. **Login to Firebase**:
+```bash
+firebase login
+```
+
+3. **Initialize Firebase in your project**:
+```bash
+firebase init hosting
+```
+   - Select "Use an existing project" or "Create a new project"
+   - Set public directory to: `dist`
+   - Configure as single-page app: `Yes`
+   - Set up automatic builds: `No` (or `Yes` if using GitHub Actions)
+   - Overwrite index.html: `No`
+
+4. **Update `.firebaserc`** with your Firebase project ID:
+   - Open `.firebaserc` and replace `your-project-id` with your actual Firebase project ID
+
+5. **Build your application**:
+```bash
+npm run build
+```
+
+6. **Deploy to Firebase**:
+```bash
+firebase deploy
+```
+
+Your application will be live at: `https://your-project-id.web.app` or `https://your-project-id.firebaseapp.com`
+
+### Quick Deploy Script
+You can also create a deploy script in `package.json`:
+```json
+"scripts": {
+  "deploy": "npm run build && firebase deploy"
+}
+```
+
+Then simply run:
+```bash
+npm run deploy
+```
+
 ## 📁 Project Structure
 
 ```
